@@ -16,7 +16,15 @@ public class App {
 		 * context is basically the IoC which will provide the object of student class.
 		 */
 
-		Student std = (Student) context.getBean("student1");
-		System.out.println(std);
+		Student std1 = (Student) context.getBean("student1");
+		System.out.println("adding value as an element(basic way)");
+		System.out.println(std1);
+		Student std2 = (Student) context.getBean("student2");
+		System.out.println("\nadding value as an attribute without adding value tag in other line");
+		System.out.println(std2);
+		Student std3 = (Student) context.getBean("student3");
+		System.out.println("\nusing p schema for inserting the values as an attribute");
+		System.out.println(std3);
+
 	}
 }
